@@ -14,6 +14,13 @@ public class Variable {
 		this.identificador = identificador;
 		
 	}
+	
+	public void agregarProduccion(String prod) {
+		if(!producciones.contains(prod)) {
+			producciones.add(prod);
+		}
+	}
+	
 
 	public HashSet<String> getProducciones() {
 		return producciones;
