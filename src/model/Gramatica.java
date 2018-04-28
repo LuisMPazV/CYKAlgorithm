@@ -72,9 +72,9 @@ public class Gramatica {
 			for (int j = 1; j < cykArray.length; j++) {
 				for (int i = 0; i < cykArray.length-j; i++) {
 					HashSet<String> generados=new HashSet<>();
-					for(int k=0;k<j-1;k++) {
+					for(int k=0;k<j;k++) {
 						String [] primero=cykArray[i][k];
-						String [] segundo=cykArray[i+k][j-k];
+						String [] segundo=cykArray[i+k+1][j-k-1];
 						if(primero!=null&&segundo!=null) {
 							for (int l = 0; l < primero.length; l++) {
 								for (int l2 = 0; l2 < segundo.length; l2++) {
@@ -103,7 +103,7 @@ public class Gramatica {
 						if(producen.size()>0) {
 							String[] resultado=new String[producen.size()];
 							for (int k = 0; k < resultado.length; k++) {
-								resultado[0]=producen.get(i);
+								resultado[k]=producen.get(k);
 							}
 							cykArray[i][j]=resultado;
 						}else {
@@ -118,7 +118,7 @@ public class Gramatica {
 			
 			boolean containsInicio=false;
 			
-			String[] array0j=cykArray[0][cykArray.length];
+			String[] array0j=cykArray[0][cykArray.length-1];
 			for (int i = 0; i < array0j.length&&!containsInicio; i++) {
 				if(array0j[i].equals(inicio)) {
 					containsInicio=true;
