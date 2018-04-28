@@ -5,16 +5,32 @@ import java.util.HashSet;
 public class Variable {
 	
 	
+	/**
+	 * Set de producciones
+	 */
 	private HashSet<String> producciones;
 	
+	/**
+	 * Identificador de la variable
+	 */
 	private String identificador;
 
+	
+	/**
+	 * Constructor de la variable
+	 * @param identificador	identificador de la variable
+	 */
 	public Variable(String identificador) {
 		this.producciones = new HashSet<>();
 		this.identificador = identificador;
 		
 	}
 	
+	
+	/**
+	 * Agrega una produccion a la variable en caso de que no exista en el set de producciones
+	 * @param prod nueva produccion
+	 */
 	public void agregarProduccion(String prod) {
 		if(!producciones.contains(prod)) {
 			producciones.add(prod);
