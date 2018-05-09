@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-
-<BorderPane prefHeight="450.0" prefWidth="650.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<BorderPane prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <bottom>
       <HBox alignment="CENTER" BorderPane.alignment="CENTER">
          <children>
@@ -52,7 +51,7 @@
                      </font>
                   </Label>
                   <Region HBox.hgrow="ALWAYS" />
-                  <TextArea fx:id="txtArea" prefHeight="300.0" prefWidth="480.0">
+                  <TextArea fx:id="txtArea" prefHeight="300.0" prefWidth="480.0" promptText="Formato de variable: Var -&gt; Prod1|Prod2|...|ProdN">
                      <font>
                         <Font size="20.0" />
                      </font>

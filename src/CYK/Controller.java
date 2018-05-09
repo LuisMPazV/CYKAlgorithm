@@ -58,13 +58,18 @@ public class Controller extends Application {
 	public void aplyCYK(String grammar, String chain) {
 		grammar = formatGrammar(grammar);
 		gr = new Gramatica();
-		gr.agregarVariables(grammar);
-		boolean generates =  gr.CYKAlgorithm(chain);
-		if (generates) {
-			Alert a = new Alert(AlertType.INFORMATION, "La gramatica si genera la cadena w");
-			a.show();
-		} else {
-			Alert a = new Alert(AlertType.INFORMATION, "La gramatica no genera la cadena w");
+		try {
+			gr.agregarVariables(grammar);
+			boolean generates =  gr.CYKAlgorithm(chain);
+			if (generates) {
+				Alert a = new Alert(AlertType.INFORMATION, "La gramatica si genera la cadena w");
+				a.show();
+			} else {
+				Alert a = new Alert(AlertType.INFORMATION, "La gramatica no genera la cadena w");
+				a.show();
+			}			
+		} catch (Exception e) {
+			Alert a = new Alert(AlertType.INFORMATION, "La gramatica no esta bien definida con el formato requerido");
 			a.show();
 		}
 	}
