@@ -32,7 +32,7 @@ public class Gramatica {
 	 * Metodo encargado de cargar las variables y sus
 	 * producciones de la gramatica independiente de
 	 * contexto G en FNC
-	 * @param variables Variable con sus respectivas producciones separadospor espacio. Cada variable en una linea diferente
+	 * @param variables Variable con sus respectivas producciones separados por espacio. Cada variable en una linea diferente
 	 */
 	public void agregarVariables(String variables) {
 
