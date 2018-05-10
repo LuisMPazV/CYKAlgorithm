@@ -149,10 +149,13 @@ public class Gramatica {
 			boolean containsInicio=false;
 			
 			String[] array0j=cykArray[0][cykArray.length-1];			//Variables en la pos 0,longitudCad-1. Se quiere varidar que la variable inicial este en estas variables
-			for (int i = 0; i < array0j.length&&!containsInicio; i++) {
-				if(array0j[i].equals(inicio)) {
-					containsInicio=true;		//En caso de que pertenesca al arreglo la variable inicial
+			if(array0j!=null) {
+				for (int i = 0; i < array0j.length&&!containsInicio; i++) {
+					if(array0j[i].equals(inicio)) {
+						containsInicio=true;		//En caso de que pertenesca al arreglo la variable inicial
+					}
 				}
+				
 			}
 			generates=containsInicio;			//Se asigna el resultado al retorno
 
